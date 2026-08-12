@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Bejonder"
-run/main_scene="uid://dph2pv7ev0g1q"
+run/main_scene="uid://hco04jt5svsv"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
