@@ -55,6 +55,25 @@ theme_override_fonts/font = ExtResource("1_37p78")
 theme_override_font_sizes/font_size = 64
 text = "Start"
 
+[node name="MovementJoystick" type="VirtualJoystick" parent="." unique_id=1775358681]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -220.0
+offset_top = -260.0
+grow_horizontal = 0
+grow_vertical = 0
+joystick_size = 120.0
+tip_size = 56.0
+deadzone_ratio = 0.2
+initial_offset_ratio = Vector2(0.5, 0.65)
+action_left = &"move_left"
+action_right = &"move_right"
+action_up = &"move_up"
+action_down = &"move_down"
+
 [node name="MessageTimer" type="Timer" parent="." unique_id=1096655665]
 wait_time = 2.0
 one_shot = true

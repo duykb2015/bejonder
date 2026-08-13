@@ -9,7 +9,7 @@ var screen_size: Vector2
 
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
-	#hide()
+	hide()
 
 
 func _process(delta: float) -> void:
@@ -17,23 +17,14 @@ func _process(delta: float) -> void:
 
 
 func process_player_input(delta: float) -> void:
-	var direction := Vector2.ZERO
+	var direction := Input.get_vector(
+		"move_left",
+		"move_right",
+		"move_up",
+		"move_down"
+	)
 
-	if Input.is_action_pressed("move_right"):
-		direction.x += 1
-
-	if Input.is_action_pressed("move_left"):
-		direction.x -= 1
-
-	if Input.is_action_pressed("move_up"):
-		direction.y -= 1
-
-	if Input.is_action_pressed("move_down"):
-		direction.y += 1
-
-	if direction.length() > 0:
-		direction = direction.normalized()
-
+	if direction != Vector2.ZERO:
 		$AnimatedSprite2D.play()
 		position += direction * speed * delta
 	else:
